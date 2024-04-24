@@ -26,7 +26,7 @@ const Success = () => {
     <>
     <section className="notFound">
       <div className="container">
-        <img src="/public/sandwich.png" alt="" />
+        <img src="./sandwich.png" alt="" />
         <h1>Redirecting to Home Page in {countDown} seconds...</h1>
         <Link to={'/'}>
           Back to Home <HiOutlineArrowNarrowRight/>

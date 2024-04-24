@@ -7,7 +7,7 @@ const NotFound = () => {
     <>
     <section className="notFound">
       <div className="container">
-        <img src="/public/notFound.svg" alt="" />
+        <img src="./notFound.svg" alt="" />
         <h1>AVAILABLE SOON</h1>
         <p>The Page You are Looking for is still in development.</p>
         <Link to={'/'}>
