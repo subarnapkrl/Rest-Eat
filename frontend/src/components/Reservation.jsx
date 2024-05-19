@@ -12,9 +12,11 @@ const Reservation = () => {
   const [time, setTime] = useState("");
   const [phone, setPhone] = useState(0);
   const navigate = useNavigate();
+  const [loading,setLoading]=useState(false)
 
   const handleReservation = async (e) => {
     e.preventDefault();
+    setLoading(true)
     try {
       const { data } = await axios.post(
         "https://rest-eats.onrender.com/api/v1/reservation/send",
@@ -36,8 +38,14 @@ const Reservation = () => {
       navigate("/success");
     } catch (error) {
       toast.error(error.response.data.message);
+    }finally{
+      setLoading(false)
     }
   };
+
+  if(loading){
+    return <h1>Loading</h1>
+  }
 
   return (
     <section className="reservation" id="reservation">
